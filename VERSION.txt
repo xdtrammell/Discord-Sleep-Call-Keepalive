@@ -1,0 +1,6 @@
+Sleep Call Keepalive
+Version 1.1.0
+
+Public release: adds native-layout self-test, upgrade-safe compilation,
+documentation, and open-source release assets. Preserves the verified idle
+threshold and F15 keepalive behavior from the 1.0.1 build.

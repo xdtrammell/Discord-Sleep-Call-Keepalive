@@ -1,0 +1,10 @@
+*.exe
+*.pdb
+*.log
+*.previous
+status.txt
+*.candidate.exe
+*.backup.exe
+.vs/
+bin/
+obj/
