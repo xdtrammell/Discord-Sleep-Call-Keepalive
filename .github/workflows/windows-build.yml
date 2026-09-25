@@ -25,10 +25,10 @@ jobs:
       - name: Package source distribution
         shell: powershell
         run: |
-          $files = @('Check Status.cmd','DiscordKeepAlive.cs','Install.cmd','Install.ps1','Open Log.cmd','README.md','RELEASE_NOTES.md','START HERE.txt','Test F15 Input.cmd','Uninstall.cmd','Uninstall.ps1','VERSION.txt','blocked-processes.txt','settings.ini','LICENSE','CONTRIBUTING.md','SECURITY.md')
-          Compress-Archive -Path ($files + @('assets')) -DestinationPath Sleep-Call-Keepalive-Windows-v1.1.0.zip
+          $files = @('DiscordKeepAlive.cs','Install.cmd','Install.ps1','README.md','Uninstall.cmd','Uninstall.ps1','settings.ini','LICENSE')
+          Compress-Archive -Path ($files + @('assets')) -DestinationPath Sleep-Call-Keepalive-Windows-v1.1.1.zip
       - uses: actions/upload-artifact@v4
         with:
-          name: Sleep-Call-Keepalive-Windows-v1.1.0
-          path: Sleep-Call-Keepalive-Windows-v1.1.0.zip
+          name: Sleep-Call-Keepalive-Windows-v1.1.1
+          path: Sleep-Call-Keepalive-Windows-v1.1.1.zip
           if-no-files-found: error

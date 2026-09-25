@@ -35,7 +35,10 @@ try {
         Copy-Item -LiteralPath (Join-Path $SourceDirectory 'settings.ini') -Destination $SettingsFile
     }
     if (-not (Test-Path -LiteralPath $BlocklistFile)) {
-        Copy-Item -LiteralPath (Join-Path $SourceDirectory 'blocked-processes.txt') -Destination $BlocklistFile
+        $BundledBlocklist = Join-Path $SourceDirectory 'blocked-processes.txt'
+        if (Test-Path -LiteralPath $BundledBlocklist) {
+            Copy-Item -LiteralPath $BundledBlocklist -Destination $BlocklistFile
+        }
     }
     Copy-Item -LiteralPath (Join-Path $SourceDirectory 'README.md') -Destination $ReadmeFile -Force
 

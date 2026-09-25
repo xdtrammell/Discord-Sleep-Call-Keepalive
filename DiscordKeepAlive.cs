@@ -36,7 +36,7 @@ namespace DiscordSleepCallKeepalive
                 string mode = args.Length > 0 ? args[0].Trim().ToLowerInvariant() : "--run";
                 if (mode == "--version")
                 {
-                    Console.WriteLine("Discord Sleep-Call Keepalive 1.1.0");
+                    Console.WriteLine("Discord Sleep-Call Keepalive 1.1.1");
                     return 0;
                 }
 
